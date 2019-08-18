@@ -1,3 +1,4 @@
+import 'package:devfest/config/index.dart';
 import 'package:devfest/utils/devfest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,7 +13,7 @@ Future<void> main() async {
 
   Devfest.prefs = await SharedPreferences.getInstance();
 
-  runApp(MyApp());
+  runApp(ConfigPage());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: Container(),
     );
   }
 }
